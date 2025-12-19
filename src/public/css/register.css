@@ -1,0 +1,64 @@
+h1 {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin: 80px 0 20px 0;
+}
+
+.register-form {
+    width: 40%;
+    margin: 0 auto;
+    padding: 40px 80px;
+}
+
+.register-info {
+    width: 100%;
+}
+
+.register-info p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 40px 10px 10px 0;
+}
+
+.register-info input {
+    width: 100%;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #000;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.register-button {
+    margin: 0;
+    padding: 0;
+}
+
+.register-button button {
+    display: block;
+    width: 100%;
+    padding: 10px 40px;
+    margin: 80px 0 40px 0;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+}
+.register-button button:hover {
+    background-color: #f86d6d;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+}
