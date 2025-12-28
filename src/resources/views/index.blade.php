@@ -6,36 +6,50 @@
 
 @section('content')
 <div class="section-tabs">
-    <button class="section-tab-item">おすすめ</button>
+    <button class="section-tab-item active">おすすめ</button>
     <button class="section-tab-item">マイリスト</button>
 </div>
 <div class="products">
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p> 
     </div>
     <div class="product-card">
-        <img src="" alt="商品画像" class="product-image">
+        <div class="product-image-wrapper">
+            <img src="" alt="商品画像" class="product-image">
+        </div>
         <p class="product-name">商品名</p>
     </div>
 </div>

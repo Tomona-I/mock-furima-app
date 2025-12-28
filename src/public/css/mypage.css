@@ -1,0 +1,118 @@
+.mypage-container {
+    width: 100%;
+    padding-bottom: 60px;
+    box-sizing: border-box;
+}
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.profile-icon {
+    width: 150px;
+    height: 150px;
+    margin: 20px 40px 20px 0;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.profile-username {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.profile-edit-button {
+    margin-left: 250px;
+}
+
+.profile-edit-button button {
+    padding: 10px 20px;
+    border: 2px solid #f86d6d;
+    background: none;
+    color: #f86d6d;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-edit-button button:hover {
+    color: #fff;
+    background-color: #f86d6d;
+}
+
+.mypage-list-tabs {
+    display: flex;
+    border-bottom: 2px solid #5f5f5f;
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.mypage-list-tab-item {
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 30px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    position: relative;
+    margin: 0;
+    border-radius: 4px;
+}
+.mypage-list-tab-item:hover {
+    background-color: #f5f3f3;
+}
+.mypage-list-tab-item.active {
+    color: #e60023;
+    font-weight: bold;
+}
+.mypage-products {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: 0 auto;
+    gap: 60px;
+    padding: 60px 0;
+}
+.mypage-products-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+}
+
+.mypage-product-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #d9d9d9;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.mypage-product-image-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308);
+}

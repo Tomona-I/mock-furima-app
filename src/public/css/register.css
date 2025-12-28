@@ -6,9 +6,11 @@ h1 {
 }
 
 .register-form {
-    width: 40%;
+    width: 90%;
+    max-width:800px;
     margin: 0 auto;
-    padding: 40px 80px;
+    padding: 40px;
+    box-sizing: border-box;
 }
 
 .register-info {
@@ -61,4 +63,31 @@ h1 {
 .login-link {
     text-align: center;
     margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+        margin: 40px 0 20px 0;
+    }
+
+    .register-form {
+        padding: 20px;
+    }
+
+    .register-info p {
+        font-size: 14px;
+        margin: 20px 10px 8px 0;
+    }
+
+    .register-info input {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .register-button button {
+        padding: 8px 15px;
+        margin: 40px 0 20px 0;
+        font-size: 14px;
+    }
 }

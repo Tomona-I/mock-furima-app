@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Laravel\Fortify\Features;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +23,18 @@ Route::get('/index', function () {
 Route::get('/detail', function () {
     return view('detail');
 });
-Route::get('/login', function () {
-    return view('login');
+Route::get('/profile_edit', function () {
+    return view('profile_edit');
 });
-Route::get('/register', function () {
-    return view('register');
+Route::get('/purchase', function () {
+    return view('purchase');
+});
+Route::get('/mypage', function () {
+    return view('mypage');
+});
+Route::get('/sell', function () {
+    return view('sell');
+});
+Route::get('/address', function () {
+    return view('address');
 });

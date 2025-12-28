@@ -9,9 +9,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding :8px 40px;
+    padding: 4px 30px;
     background-color: black;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
 .header-search-form {
@@ -24,11 +25,14 @@
 .header-search-input {
     width: 60%;
     margin: 0 90px;
-    padding: 6px 16px;
+    padding: 4px 12px;
     color: #000;
     border: 1px solid #fff;
     border-radius: 4px;
     font-size: 22px;
+    line-height: 1;
+    height: 28px;
+    box-sizing: border-box;
 }
 
 .header-search-input::placeholder {
@@ -44,20 +48,137 @@
 }
 
 .login-button-link,
-.mypage-button-link,
-.sell-button-link {
+.mypage-button-link {
     display: inline-block;
     text-decoration: none;
     color: #fff;
     font-size: 22px;
-    padding: 6px 20px;
+    padding: 4px 16px;
     border-radius: 4px;
     transition: background-color 0.2s ease;
+    line-height: 1;
+    height: 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.sell-button-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+    font-size: 22px;
+    padding: 4px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    line-height: 1;
+    height: 28px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
 }
 
 .login-button-link:hover,
-.mypage-button-link:hover,
-.sell-button-link:hover {
+.mypage-button-link:hover{
     color:#000;
     background-color: #fff;
+}
+
+.sell-button-link:hover {
+    background-color: #d4d2d2;
+}
+
+@media (max-width: 1024px) {
+    .header-area {
+        flex-wrap: wrap;
+    }
+
+    .header-logo img {
+        width: 200px;
+    }
+
+    .header-search-form {
+        margin: 0;
+        min-width: auto;
+    }
+
+    .header-search-input {
+        width: 100%;
+        font-size: 14px;
+        margin: 0;
+    }
+    .login-button,
+    .mypage-button,
+    .sell-button {
+        margin-left: 0;
+    }
+
+    .login-button-link,
+    .mypage-button-link,
+    .sell-button-link {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-area {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .header-logo {
+        flex-shrink: 0;
+    }
+
+    .header-logo img {
+        width: 140px;
+    }
+
+    .header-search-form {
+        flex: 1;
+        margin: 0;
+        min-width: 180px;
+    }
+
+    .header-search-input {
+        width: 100%;
+        font-size: 12px;
+        margin: 0;
+        padding: 6px 8px;
+        box-sizing: border-box;
+    }    
+
+    .login-button,
+    .mypage-button,
+    .sell-button {
+        flex-basis: auto;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .login-button {
+        flex-basis: calc(33.333% - 6px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .mypage-button {
+        flex-basis: calc(33.333% - 6px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .sell-button {
+        flex-basis: calc(33.333% - 6px);
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-button-link,
+    .mypage-button-link,
+    .sell-button-link {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
 }

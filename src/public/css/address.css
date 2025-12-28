@@ -5,37 +5,52 @@ h1 {
     margin: 80px 0 50px 0;
 }
 
-.login-form {
+.address-form {
     width: 90%;
-    max-width:800px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 40px;
     box-sizing: border-box;
 }
 
-.login-info {
+.address-info {
     width: 100%;
 }
 
-.login-info p {
+.form-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
     font-size: 20px;
     font-weight: bold;
-    margin: 40px 10px 10px 0;
+    margin: 0 0 10px 0;
 }
-.login-info input {
+
+.form-group input {
     width: 100%;
     padding: 15px 25px;
     box-sizing: border-box;
     border-radius: 4px;
     border: 1px solid #000;
+    font-family: inherit;
+    font-size: 16px;
 }
 
-.login-button {
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.address-button {
     margin: 0;
     padding: 0;
 }
 
-.login-button button {
+.address-button button {
     display: block;
     width: 100%;
     padding: 10px 40px;
@@ -51,18 +66,8 @@ h1 {
     text-align: center;
 }
 
-.login-button button:hover {
+.address-button button:hover {
     background-color: #f86d6d;
-}
-
-.error-message {
-    color: red;
-    margin-top: 10px;
-}
-
-.register-link {
-    text-align: center;
-    margin-top: 40px;
 }
 
 @media (max-width: 480px) {
@@ -71,21 +76,21 @@ h1 {
         margin: 40px 0 30px 0;
     }
 
-    .login-form {
+    .address-form {
         padding: 20px;
     }
 
-    .login-info p {
-        font-size: 14px;
-        margin: 20px 10px 8px 0;
-    }
-
-    .login-info input {
-        padding: 10px 15px;
+    .form-group label {
         font-size: 16px;
+        margin: 0 0 8px 0;
     }
 
-    .login-button button {
+    .form-group input {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .address-button button {
         padding: 8px 15px;
         margin: 40px 0 20px 0;
         font-size: 14px;

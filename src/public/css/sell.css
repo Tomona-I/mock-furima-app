@@ -1,0 +1,191 @@
+.sell-container {
+    display: flex;
+    justify-content: center;
+}   
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin: 40px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 50px 0 20px 0;
+    color: #5f5f5f;
+    border-bottom: 1px solid #5f5f5f;
+}
+
+.sell-form-section {
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-image-upload {
+    margin-bottom: 30px;
+}
+
+.image-preview-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    border: 1px dashed #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.image-preview-wrapper img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.image-preview-wrapper .image-select-button {
+    margin-top: 10px;
+}
+
+.image-select-button {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #f86d6d;
+    color: #f86d6d;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 15px;
+    margin: 20px 0;
+    justify-content: flex-start;
+}
+
+.category-button {
+    padding: 2px 10px;
+    background-color: #fff;
+    border: 2px solid #f86d6d;
+    color: #f86d6d;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+.category-button:hover {
+    color: #fff;
+    background-color: #f86d6d;
+}
+
+.category-button.active {
+    color: #fff;
+    background-color: #f86d6d;
+}
+
+.product-condition {
+    margin-bottom: 30px;
+}
+
+.product-condition select {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #555454;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #000;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* レスポンシブ */
+@media (max-width: 480px) {
+    .form-group label {
+        font-size: 16px;
+        margin: 0 0 8px 0;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 120px;
+    }
+}
+
+.sell-button {
+    margin: 0;
+    padding: 0;
+}
+
+.sell-button button {
+    display: block;
+    width: 100%;
+    padding: 10px 40px;
+    margin: 80px 0 40px 0;
+    background-color: #ff5555;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.sell-button button:hover {
+    background-color: #f86d6d;
+}
+
+@media (max-width: 480px) {
+    .sell-button button {
+        padding: 8px 15px;
+        margin: 40px 0 20px 0;
+        font-size: 14px;
+    }
+}
