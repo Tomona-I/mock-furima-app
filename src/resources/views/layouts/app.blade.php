@@ -10,15 +10,16 @@
 
 <body class="body">
     <header class="header-area">
-        <a href="/" class="header-logo">
+        <a href="/index" class="header-logo">
             <img src="{{ asset('img/COACHTECHヘッダーロゴ.png') }}" alt="coachtechロゴ">
         </a>
-        <form action="/" method="get" class="header-search-form">
+        <form action="/index" method="get" class="header-search-form">
             <input type="text" name="keyword" class="header-search-input" placeholder="なにをお探しですか？" >
         </form>
-        <div class="login-button">
-            <a href="/login" class="login-button-link">ログイン</a>
-        </div>
+        <form action="/logout" method="post" class="logout-button">
+            @csrf
+            <button type="submit" class="logout-button-link">ログアウト</button>
+        </form>
         <div class="mypage-button">
             <a href="/mypage" class="mypage-button-link">マイページ</a>
         </div>

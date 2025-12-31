@@ -10,7 +10,7 @@
 
 <body class="body">
     <header class="header-area">
-        <a href="/" class="header-logo">
+        <a href="/index" class="header-logo">
             <img src="{{ asset('img/COACHTECHヘッダーロゴ.png') }}" alt="coachtechロゴ">
         </a>
     </header>
