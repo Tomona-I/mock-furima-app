@@ -24,7 +24,7 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => ['required', 'string', 'email'],
+            'email' => ['required', 'string', 'email', 'exists:users,email'],
             'password' => ['required', 'string', 'min:8'],
         ];
     }
@@ -37,10 +37,11 @@ class LoginRequest extends FormRequest
     public function messages()
     {
         return [
-            'email.required' => 'メールアドレスを入力してください。',
-            'email.email' => 'メールアドレスはメール形式で入力してください。',
-            'password.required' => 'パスワードを入力してください。',
-            'password.min' => 'パスワードは8文字以上で入力してください。',
+            'email.required' => 'メールアドレスを入力してください',
+            'email.email' => 'メールアドレスはメール形式で入力してください',
+            'password.required' => 'パスワードを入力してください',
+            'password.min' => 'パスワードは8文字以上で入力してください',
+            'email.exists' => 'ログイン情報が登録されていません',
         ];
     }
 }

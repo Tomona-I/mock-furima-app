@@ -65,6 +65,12 @@ h2 {
     font-size: 16px;
     cursor: pointer;
     font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.image-select-button:hover {
+    color: #fff;
+    background-color: #f86d6d;
 }
 
 .category-buttons {
@@ -72,7 +78,7 @@ h2 {
     flex-wrap: wrap;
     width: 100%;
     gap: 15px;
-    margin: 20px 0;
+    margin-top: 20px;
     justify-content: flex-start;
 }
 
@@ -88,6 +94,7 @@ h2 {
     white-space: nowrap;
     transition: all 0.3s ease;
 }
+
 .category-button:hover {
     color: #fff;
     background-color: #f86d6d;
@@ -139,7 +146,11 @@ h2 {
     font-size: 14px;
 }
 
-/* レスポンシブ */
+.category-selection .error-message {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
 @media (max-width: 480px) {
     .form-group label {
         font-size: 16px;
@@ -180,6 +191,14 @@ h2 {
 
 .sell-button button:hover {
     background-color: #f86d6d;
+}
+
+.image-input {
+    display: none;
+}
+
+.category-label input {
+    display: none;
 }
 
 @media (max-width: 480px) {
