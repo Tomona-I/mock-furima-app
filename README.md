@@ -193,7 +193,7 @@ items (1) ---- (many) favorites
 items (many) ---- (many) categories (via item_categories)
 ```
 
-## 環境構築
+## 環境構築手順
 
 ### Dockerビルド
 - git clone <リンク>
@@ -206,6 +206,14 @@ items (many) ---- (many) categories (via item_categories)
 - php artisan key:generate
 - php artisan migrate
 - php artisan db:seed
+
+## テストアカウント
+
+### 一般ユーザー（動作確認用）
+- **メールアドレス**: test@example.com
+- **パスワード**: password
+
+> **注意**: シーダー実行時に自動作成される8人のランダムユーザーもログイン可能です（パスワードは全て `password`）。ただし、メールアドレスはランダムなため、事前にデータベースで確認する必要があります。
 
 ## URL
 - 商品一覧画面（トップ画面）：http://localhost/index
@@ -237,11 +245,5 @@ items (many) ---- (many) categories (via item_categories)
 - 商品出品
 - 商品購入
 - コメント・お気に入り登録
-
-### 実装詳細
-
-#### メール送信（開発環境）
-本アプリでは、ユーザー登録時にメール認証を行う仕組みを導入しています。
-開発環境では Mailhog を使用してメール送信をテストします。
 
 **Mailhog UI**: http://localhost:8025
