@@ -13,8 +13,8 @@ class Category extends Model
         'name',
     ];
 
-    public function products()
+    public function items()
     {
-        return $this->belongToMany(Product::class);
+        return $this->belongsToMany(Item::class, 'item_categories');
     }
 }

@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Item;
 use App\Models\Favorite;
 
 class FavoriteController extends Controller
 {
-    public function toggle(Product $product)
+    public function toggle(Item $product)
     {
+        if (!auth()->check() || !auth()->user()->hasVerifiedEmail()) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
         $user = auth()->user();
         
         $favorite = $product->favorites()->where('user_id', $user->id)->first();
@@ -19,7 +23,7 @@ class FavoriteController extends Controller
         } else {
             Favorite::create([
                 'user_id' => $user->id,
-                'product_id' => $product->id,
+                'item_id' => $product->id,
             ]);
             $favorited = true;
         }

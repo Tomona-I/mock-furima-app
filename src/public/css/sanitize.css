@@ -5,6 +5,10 @@
 * Add border box sizing in all browsers (opinionated).
 */
 
+html {
+    scrollbar-gutter: stable;
+}
+
 *,
 ::before,
 ::after {

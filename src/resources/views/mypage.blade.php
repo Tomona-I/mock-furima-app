@@ -41,11 +41,11 @@
         @else
         <div class="mypage-products">
             @forelse($purchasedOrders as $order)
-                <a href="{{ route('item', $order->product->id) }}" class="mypage-product-card">
+                <a href="{{ route('item', $order->item->id) }}" class="mypage-product-card">
                     <div class="mypage-product-image-wrapper">
-                        <img src="{{ asset('storage/' . $order->product->product_image) }}" alt="{{ $order->product->name }}" class="mypage-product-image">
+                        <img src="{{ asset('storage/' . $order->item->product_image) }}" alt="{{ $order->item->name }}" class="mypage-product-image">
                     </div>
-                    <p class="mypage-product-name">{{ $order->product->name }}</p>
+                    <p class="mypage-product-name">{{ $order->item->name }}</p>
                 </a>
             @empty
                 <p class="no-products">購入した商品がありません</p>

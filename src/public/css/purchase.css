@@ -76,9 +76,28 @@
     cursor: pointer;
 }
 
+.card-element {
+    width: 50%;
+    padding: 12px;
+    margin: 10px 100px 50px 50px;
+    border: 1px solid #555454;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
 .error-message {
     color: red;
     margin-top: 10px;
+    margin-left: 100px;
+}
+
+.validation-error {
+    color: red;
+}
+
+.validation-error p {
+    margin: 5px 0;
 }
 
 .address-section-header {
@@ -172,22 +191,86 @@ td {
     background-color: #f86d6d;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 850px) {
     .purchase-container {
-        flex-direction: column;
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 0 15px 60px 15px;
     }
 
-    .purchase-summary {
+    .purchase-product-section,
+    .purchase-address-section,
+    .purchase-payment-section {
         width: 100%;
-        position: static;
+        padding: 15px;
+        margin-bottom: 25px;
     }
 
-    .purchase-product {
-        flex-direction: column;
+    .purchase-product-section h2,
+    .purchase-address-section h2,
+    .purchase-payment-section h2 {
+        font-size: 18px;
+        margin: 0 0 15px 0;
     }
 
     .purchase-product img {
+        width: 120px;
+        height: 120px;
+        margin: 0 20px 20px 0;
+    }
+
+    .product-name {
+        font-size: 20px;
+        margin: 0 0 10px 0;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .card-element {
+        width: 70%;
+        padding: 6px;
+        margin: 10px 50px 40px 30px;
+        font-size: 14px;
+    }
+
+    .payment-select {
+        width: 70%;
+        padding: 6px;
+        margin: 10px 50px 30px 30px;
+        font-size: 14px;
+    }
+
+    .address-info-content {
+        margin: 20px 0 20px 30px;
+    }
+
+    .address-info p {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+
+    table {
         width: 100%;
-        max-width: 200px;
+        max-width: 300px;
+        height: auto;
+    }
+
+    th, td {
+        padding: 15px 8px;
+        font-size: 14px;
+    }
+
+    td {
+        font-size: 16px;
+    }
+
+    .purchase-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 8px;
+        font-size: 16px;
+        margin-top: 40px;
     }
 }

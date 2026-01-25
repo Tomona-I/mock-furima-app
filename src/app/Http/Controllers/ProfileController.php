@@ -3,18 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileRequest;
-use App\Models\Product;
+use App\Models\Item;
 
 class ProfileController extends Controller
 {
-    public function edit(Product $product = null)
+    public function edit(Item $product = null)
     {
         $user = auth()->user();
         
         return view('profile_edit', ['user' => $user, 'product' => $product]);
     }
 
-    public function update(ProfileRequest $request, Product $product = null)
+    public function update(ProfileRequest $request, Item $product = null)
     {
         $user = auth()->user();
         $validated = $request->validated();

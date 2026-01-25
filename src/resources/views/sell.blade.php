@@ -45,7 +45,7 @@
                     <label>商品の状態</label>
                     <select name="condition">
                         <option value="" {{ old('condition') === null ? 'selected' : '' }} disabled hidden>選択してください</option>
-                        <option value="new" {{ old('condition') === 'new' ? 'selected' : '' }}>新品</option>
+                        <option value="new" {{ old('condition') === 'new' ? 'selected' : '' }}>良好</option>
                         <option value="used" {{ old('condition') === 'used' ? 'selected' : '' }}>目立った傷や汚れなし</option>
                         <option value="damaged" {{ old('condition') === 'damaged' ? 'selected' : '' }}>やや傷や汚れあり</option>
                         <option value="junk" {{ old('condition') === 'junk' ? 'selected' : '' }}>状態が悪い</option>

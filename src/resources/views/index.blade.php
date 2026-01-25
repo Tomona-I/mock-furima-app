@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('css/products.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
 @section('content')
@@ -29,49 +29,5 @@
     @empty
         <p>商品がありません</p>
     @endforelse
-    
-    <!-- ハードコーディング済みの商品カード（参考用） -->
-    <!-- <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p> 
-    </div>
-    <div class="product-card">
-        <div class="product-image-wrapper">
-            <img src="" alt="商品画像" class="product-image">
-        </div>
-        <p class="product-name">商品名</p>
-    </div> -->
 </div>
 @endsection 

@@ -10,7 +10,7 @@ class MyPageController extends Controller
         $page = request()->query('page', 'sell');
         
         if ($page === 'buy') {
-            $purchasedOrders = $user->orders()->with('product')->latest()->get();
+            $purchasedOrders = $user->orders()->with('item')->latest()->get();
             return view('mypage', [
                 'user' => $user,
                 'purchasedOrders' => $purchasedOrders,
@@ -18,7 +18,7 @@ class MyPageController extends Controller
             ]);
         }
         
-        $listedProducts = $user->products()->latest()->get();
+        $listedProducts = $user->items()->latest()->get();
         return view('mypage', [
             'user' => $user,
             'listedProducts' => $listedProducts,

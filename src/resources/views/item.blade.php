@@ -28,7 +28,7 @@
                 <span class="like-count favorite-count">{{ $favoriteCount }}</span>
             </div>
             <div class="comments">
-                <img class="comment-icon" src="{{ asset('img/ふきだしロゴ.png') }}" alt="コメントアイコン">
+                <img class="comment-icon" src="{{ asset('img/fukidasi_logo.png') }}" alt="コメントアイコン">
                 <span class="comment-count">{{ $commentCount }}</span>
             </div>
         </div>
@@ -54,7 +54,7 @@
             <p class="product-condition">商品の状態<span class="condition-name">
                 @switch($product->condition)
                     @case('new')
-                        新品
+                        良好
                         @break
                     @case('used')
                         目立った傷や汚れなし
@@ -118,12 +118,19 @@ document.querySelector('.favorite-button').addEventListener('click', async funct
             },
         });
         
+        if (res.status === 401) {
+            window.location.href = '/login';
+            return;
+        }
+        
         const data = await res.json();
         icon.src = data.favorited 
             ? '{{ asset("img/ハートロゴ_ピンク.png") }}' 
             : '{{ asset("img/ハートロゴ_デフォルト.png") }}';
         count.textContent = data.count;
-    } catch (error) {}
+    } catch (error) {
+        console.error('Error:', error);
+    }
 });
 </script>
 

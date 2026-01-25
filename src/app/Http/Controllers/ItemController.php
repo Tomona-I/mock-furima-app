@@ -2,31 +2,36 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
+use App\Models\Item;
 use App\Models\Category;
 use App\Http\Requests\StoreProductRequest;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
+class ItemController extends Controller
 {
     public function index(Request $request)
     {
         $tab = $request->query('tab', 'recommended');
         $keyword = $request->query('keyword');
         
-        if ($tab === 'mylist' && auth()->check()) {
-            $query = auth()->user()->favorites();
-            
-            if ($keyword) {
-                $query->whereHas('product', function ($q) use ($keyword) {
-                    $q->where('name', 'like', '%' . $keyword . '%');
-                });
+        if ($tab === 'mylist') {
+            if (auth()->check()) {
+                $query = auth()->user()->favorites();
+                
+                if ($keyword) {
+                    $query->whereHas('item', function ($q) use ($keyword) {
+                        $q->where('name', 'like', '%' . $keyword . '%');
+                    });
+                }
+                
+                $favorites = $query->orderBy('created_at', 'desc')->get();
+                $products = $favorites->pluck('item');
+            } else {
+                
+                $products = collect();
             }
-            
-            $favorites = $query->orderBy('created_at', 'desc')->get();
-            $products = $favorites->pluck('product');
         } else {
-            $query = Product::query();
+            $query = Item::query();
             
             if (auth()->check()) {
                 $query->where('user_id', '!=', auth()->id());
@@ -52,19 +57,21 @@ class ProductController extends Controller
     {
         $validated = $request->validated();
         
-        $validated['product_image'] = $request->file('product_image')->store('products', 'public');
+        $validated['product_image'] = $request->file('product_image')->store('items', 'public');
         
         $validated['user_id'] = auth()->id();
         
-        $product = Product::create($validated);
+        $product = Item::create($validated);
         
         $product->categories()->attach($request->categories);
         
         return redirect('/mypage');
     }
 
-    public function show(Product $product)
+    public function show(Item $product)
     {
+        $product->load('categories');
+        
         $comments = $product->comments()->with('user')->orderBy('created_at', 'desc')->get();
         
         $favoriteCount = $product->favorites()->count();

@@ -134,3 +134,52 @@
     color: #333;
     margin: 0;
 }
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .profile-section {
+        flex-direction: column;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .profile-icon {
+        width: 120px;
+        height: 120px;
+        margin: 15px auto 15px auto;
+    }
+
+    .profile-info {
+        margin-left: 0;
+    }
+
+    .profile-username {
+        font-size: 22px;
+    }
+
+    .profile-edit-button {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+
+    .profile-edit-button a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .mypage-list-tab-item {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .mypage-products {
+        grid-template-columns: repeat(3, 1fr);
+        width: 95%;
+        gap: 40px;
+        padding: 40px 0;
+    }
+
+    .mypage-product-name {
+        font-size: 12px;
+        padding: 8px;
+    }
+}

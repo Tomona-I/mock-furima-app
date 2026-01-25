@@ -201,10 +201,63 @@ h2 {
     display: none;
 }
 
-@media (max-width: 480px) {
-    .sell-button button {
-        padding: 8px 15px;
-        margin: 40px 0 20px 0;
+@media (min-width: 768px) and (max-width: 850px) {
+    h1 {
+        font-size: 26px;
+        margin: 30px 0 25px 0;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin: 35px 0 15px 0;
+    }
+
+    label {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .product-image-upload {
+        margin-bottom: 25px;
+    }
+
+    .image-preview-wrapper {
+        min-height: 250px;
+    }
+
+    .image-preview-wrapper img {
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+    .category-buttons {
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .category-button {
+        padding: 2px 8px;
+        font-size: 12px;
+    }
+
+    .product-condition select {
+        padding: 6px 10px;
         font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+    }
+
+    .sell-button button {
+        padding: 8px 30px;
+        margin: 60px 0 30px 0;
+        font-size: 18px;
     }
 }
