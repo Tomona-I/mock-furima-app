@@ -14,7 +14,7 @@ class ProfileTest extends TestCase
     use RefreshDatabase;
 
     /**
-     * プロフィール情報取得テスト①: 必要な情報が取得できる
+     * ユーザー情報取得テスト①: 必要な情報が取得できる
      * （プロフィール画像、ユーザー名、出品した商品一覧、購入した商品一覧）
      */
     public function test_profile_page_displays_all_required_information()
@@ -101,7 +101,7 @@ class ProfileTest extends TestCase
     }
 
     /**
-     * ユーザー情報変更テスト①: 各項目の初期値が正しく表示されている
+     * ユーザー情報変更テスト①: 変更項目が初期値として過去設定されている
      * （プロフィール画像、ユーザー名、郵便番号、住所）
      */
     public function test_profile_edit_page_displays_initial_values()

@@ -176,7 +176,7 @@ class ItemTest extends TestCase
     }
 
     /**
-     * マイリストテスト②: いいねした商品の中で購入済み商品に「Sold」ラベルが表示される
+     * マイリストテスト②: 購入済み商品は「Sold」と表示される
      */
     public function test_favorited_purchased_products_show_sold_label()
     {

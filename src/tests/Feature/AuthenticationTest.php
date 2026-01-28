@@ -78,7 +78,7 @@ class AuthenticationTest extends TestCase
     }
 
     /**
-     * テスト④: パスワードが8文字未満の場合、バリデーションメッセージが表示される
+     * テスト④: パスワードが7文字以下の場合、バリデーションメッセージが表示される
      */
     public function test_register_with_short_password_shows_validation_error()
     {
@@ -98,7 +98,7 @@ class AuthenticationTest extends TestCase
     }
 
     /**
-     * テスト⑤: パスワードと確認用パスワードが一致しない場合、バリデーションメッセージが表示される
+     * テスト⑤: パスワードが確認用パスワードが一致しない場合、バリデーションメッセージが表示される
      */
     public function test_register_with_mismatched_password_confirmation_shows_validation_error()
     {

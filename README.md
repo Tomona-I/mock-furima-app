@@ -91,6 +91,7 @@ mock-furima-app/
 | id | INT | プライマリキー |
 | name | VARCHAR | ユーザー名 |
 | email | VARCHAR | メールアドレス |
+| email_verified_at | TIMESTAMP | メール認証日時 |
 | password | VARCHAR | パスワード（ハッシュ化） |
 | postal_code | VARCHAR | 郵便番号 |
 | address | VARCHAR | 住所 |
@@ -98,6 +99,7 @@ mock-furima-app/
 | profile_image | VARCHAR | プロフィール画像パス |
 | created_at | TIMESTAMP | 作成日時 |
 | updated_at | TIMESTAMP | 更新日時 |
+| **制約** | **UNIQUE** | **email** |
 
 #### items テーブル
 商品情報を管理するテーブル
@@ -177,21 +179,6 @@ mock-furima-app/
 | created_at | TIMESTAMP | 作成日時 |
 | updated_at | TIMESTAMP | 更新日時 |
 | **制約** | **UNIQUE** | **(user_id, item_id)** |
-
-### リレーション図
-
-```
-users (1) ---- (many) items
-users (1) ---- (many) orders
-users (1) ---- (many) comments
-users (1) ---- (many) favorites
-
-items (1) ---- (many) orders
-items (1) ---- (many) comments
-items (1) ---- (many) favorites
-
-items (many) ---- (many) categories (via item_categories)
-```
 
 ## 環境構築手順
 
